@@ -63,7 +63,7 @@ class Task
     /**
      * @return string
      */
-    public function getDesctiption(): string
+    public function getDesctiption()
     {
         return $this->desctiption;
     }
@@ -71,8 +71,9 @@ class Task
     /**
      * @param string $desctiption
      * @return Task
+     * @Assert\Length(min="1", max="100")
      */
-    public function setDesctiption(string $desctiption): Task
+    public function setDesctiption(string $desctiption)
     {
         $this->desctiption = $desctiption;
         return $this;
@@ -81,7 +82,7 @@ class Task
     /**
      * @return bool
      */
-    public function isDone(): bool
+    public function isDone()
     {
         return $this->isDone;
     }
@@ -90,7 +91,7 @@ class Task
      * @param bool $isDone
      * @return Task
      */
-    public function setIsDone(bool $isDone): Task
+    public function setIsDone(bool $isDone)
     {
         $this->isDone = $isDone;
         return $this;
@@ -99,7 +100,7 @@ class Task
     /**
      * @return \DateTime
      */
-    public function getCreatedAt(): \DateTime
+    public function getCreatedAt()
     {
         return $this->createdAt;
     }
@@ -108,11 +109,12 @@ class Task
      * @param \DateTime $createdAt
      * @return Task
      */
-    public function setCreatedAt(\DateTime $createdAt): Task
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
         return $this;
     }
+
 
 
 }
