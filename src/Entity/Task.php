@@ -71,8 +71,9 @@ class Task
     /**
      * @param string $desctiption
      * @return Task
-     * @Assert\Length(min="1", max="100")
+     *
      */
+    /*@Assert\Length(min="1", max="100")*/
     public function setDesctiption(string $desctiption)
     {
         $this->desctiption = $desctiption;
