@@ -42,6 +42,7 @@ class AppFixtures extends Fixture
             $entity->setDesctiption($task[0]);
             $user=$this->getReference($task[1]);
             $entity->setOwner($user);
+
             $manager->persist($entity);
 
         }
