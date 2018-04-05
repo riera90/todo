@@ -30,6 +30,24 @@ class User implements UserInterface , \Serializable
      */
     private $password;
 
+    public function __toString()
+    {
+        return $this->username;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getEmail()
+    {
+        return "{$this->getUsername()}xxx@uco.es";
+    }
+
     /**
      * Returns the roles granted to the user.
      *
